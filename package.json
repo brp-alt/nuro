@@ -1,10 +1,10 @@
 {
   "name": "nuro",
   "version": "1.0.0",
-  "description": "Advanced space-themed AI chat application powered by NVIDIA",
+  "description": "Modern space-themed static website",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
@@ -14,9 +14,6 @@
     "react-dom": "^18.2.0",
     "next": "^14.0.0",
     "typescript": "^5.2.0",
-    "openai": "^4.20.0",
-    "axios": "^1.6.0",
-    "zustand": "^4.4.0",
     "clsx": "^2.0.0"
   },
   "devDependencies": {
