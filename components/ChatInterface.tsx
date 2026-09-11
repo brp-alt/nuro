@@ -32,7 +32,7 @@ export default function ChatInterface() {
         },
         body: JSON.stringify({
           messages: [
-            ...messages.map((m) => ({
+            ...messages.map((m: Message) => ({
               role: m.role,
               content: m.content,
             })),
