@@ -1,29 +1,26 @@
-# 🌌 Nuro - Advanced Space-Themed AI Chat
+# 🌌 Nuro - Static Website
 
-Nuro is an advanced AI chat application with a captivating space theme, powered by NVIDIA's API for state-of-the-art language processing.
+A modern, static website with a captivating space theme. No servers, no API dependencies—just pure HTML, CSS, and JavaScript compiled to static files.
 
-## Features
+## ✨ Features
 
-- 🚀 Real-time AI conversations
-- 🌠 Beautiful space-themed UI
-- 💾 Conversation history & persistence
-- 🔒 Secure API integration with NVIDIA
-- ⚡ Fast & responsive interface
-- 🎨 Dark mode optimized design
+- 🌌 Beautiful space-themed design
+- ⚡ Ultra-fast static site (zero server overhead)
+- 📱 Fully responsive design
+- 🎨 Dark mode optimized
+- 🚀 Deploy anywhere (GitHub Pages, Netlify, Vercel static, etc.)
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Frontend**: Next.js, React, TypeScript, TailwindCSS
-- **Backend**: Node.js, Express
-- **AI API**: NVIDIA (OpenAI-compatible endpoint)
-- **Database**: PostgreSQL (optional)
-- **Deployment**: Vercel/Docker
+- **Framework**: Next.js (with static export)
+- **Styling**: TailwindCSS
+- **Language**: TypeScript
+- **Deployment**: Static HTML/CSS/JS
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js 18+
-- NVIDIA API key
 
 ### Installation
 
@@ -34,17 +31,6 @@ cd nuro
 
 # Install dependencies
 npm install
-
-# Setup environment variables
-cp .env.example .env.local
-```
-
-### Configuration
-
-Add your NVIDIA API key to `.env.local`:
-```
-NEXT_PUBLIC_API_URL=https://integrate.api.nvidia.com/v1
-NVIDIA_API_KEY=your_api_key_here
 ```
 
 ### Development
@@ -55,26 +41,55 @@ npm run dev
 
 Visit `http://localhost:3000`
 
-## Project Structure
+### Build for Production
+
+```bash
+npm run build
+```
+
+This generates static files in the `out/` directory that can be deployed anywhere.
+
+## 📦 Deployment
+
+### GitHub Pages
+```bash
+npm run build
+git add out/
+git commit -m "Build static site"
+git push
+```
+
+### Netlify
+Connect your repository to Netlify. Set build command to `npm run build` and publish directory to `out`.
+
+### Vercel
+```bash
+vercel
+```
+
+## 📂 Project Structure
 
 ```
 nuro/
-├── app/                    # Next.js app directory
-│   ├── page.tsx           # Home page
-│   ├── chat/              # Chat interface
-│   └── api/               # API routes
-├── components/            # React components
-│   ├── ChatInterface.tsx
-│   ├── MessageBubble.tsx
-│   └── SpaceTheme/
-├── lib/                   # Utilities
-│   ├── nvidia-client.ts
-│   └── chat-utils.ts
-├── styles/                # Global styles
-└── public/                # Static assets
+├── app/
+│   ├── page.tsx          # Landing page
+│   ├── layout.tsx        # Root layout
+│   └── globals.css       # Global styles
+├── components/           # Reusable components (if needed)
+├── public/               # Static assets
+├── tailwind.config.ts    # TailwindCSS config
+└── next.config.js        # Next.js config (with static export)
 ```
 
-## License
+## 🎯 Key Changes
+
+✅ Static export enabled in `next.config.js`
+✅ Removed API routes and server dependencies
+✅ Replaced interactive chat with landing page
+✅ Removed zustand, axios, and openai dependencies
+✅ Removed external API configuration
+
+## 📄 License
 
 MIT
 
