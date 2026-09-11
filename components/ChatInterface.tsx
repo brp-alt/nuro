@@ -96,7 +96,7 @@ export default function ChatInterface() {
           </div>
         ) : (
           <div className="space-y-4">
-            {messages.map((message) => (
+            {messages.map((message: Message) => (
               <MessageBubble key={message.id} message={message} />
             ))}
             {isLoading && (
